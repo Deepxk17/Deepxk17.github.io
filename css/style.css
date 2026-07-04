@@ -78,11 +78,12 @@ flex-wrap:wrap;
 .hero-right{flex:1;display:flex;justify-content:center;}
 
 .intro{
-letter-spacing:4px;
-text-transform:uppercase;
-font-size:.9rem;
-color:var(--muted);
-margin-bottom:1rem;
+    font-size:18px;
+    font-weight:600;
+    letter-spacing:6px;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:20px;
 }
 
 .hero-left h1{
