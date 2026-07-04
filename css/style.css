@@ -7,19 +7,20 @@
    CSS VARIABLES
 ========================================= */
 :root{
-    --bg-color:#0f172a;
-    --card-color:#1e293b;
-    --primary:#38bdf8;
-    --secondary:#0ea5e9;
-    --white:#ffffff;
-    --text:#e2e8f0;
-    --gray:#94a3b8;
+    --bg-color:#212529;
+    --card-color:#343A40;
+    --card-hover:#495057;
+    --border:#CED4DA;
 
-    --radius:12px;
-    --transition:0.3s ease;
-    --shadow:0 15px 35px rgba(0,0,0,.25);
+    --white:#F8F9FA;
+    --text:#E9ECEF;
+    --gray:#ADB5BD;
+    --muted:#6C757D;
+
+    --radius:18px;
+    --shadow:0 15px 40px rgba(0,0,0,.35);
+    --transition:.35s ease;
 }
-
 /* =========================================
    RESET
 ========================================= */
