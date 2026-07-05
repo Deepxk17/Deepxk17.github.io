@@ -458,3 +458,93 @@ grid-template-columns:1fr;
 }
 
 }
+/* ==========================================
+   MOBILE & TABLET RESPONSIVE STYLES
+   ========================================== */
+@media (max-width: 768px) {
+  
+  /* 1. Global Section Padding Fix */
+  section {
+    padding: 40px 20px !important; /* Prevents text from hitting the screen edges */
+  }
+
+  /* 2. Hero Section Adjustments */
+  /* If your layout splits text and image side-by-side, this stacks them cleanly */
+  .hero, .hero-container, #home {
+    display: flex !important;
+    flex-direction: column-reverse !important; /* Puts the profile image/avatar on top, text below */
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Scale down the massive typography so it doesn't break into weird lines */
+  h1 {
+    font-size: 2.5rem !important; 
+    line-height: 1.2 !important;
+  }
+  
+  h2 {
+    font-size: 1.8rem !important;
+  }
+
+  /* Center and stack the action buttons */
+  .hero-buttons, .buttons-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+    width: 100% !important;
+    align-items: center !important;
+  }
+
+  .hero-buttons a, .btn {
+    width: 80% !important; /* Makes tap targets wider and easier to click on phones */
+    text-align: center !important;
+    margin: 0 !important;
+  }
+
+  /* Ensure your profile image fits nicely and doesn't stretch */
+  .hero img, .profile-img {
+    max-width: 240px !important;
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* 3. Navigation Bar Scaling */
+  /* Keeps the nav menu items from bunching up or wrapping into a huge mess */
+  nav, .navbar {
+    padding: 15px 10px !important;
+  }
+
+  nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important; /* Allows links to flow nicely if they run out of space */
+    justify-content: center !important;
+    gap: 10px 15px !important;
+    padding: 0 !important;
+  }
+
+  /* 4. Expertise Section (What I Do) */
+  /* Changes your 3-column desktop layout (Web Dev, Graphics, Video) into a single column vertical stack */
+  .expertise-grid, .services-container, .grid-layout {
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* Forces 1 column */
+    gap: 20px !important;
+  }
+}
+
+/* Extra Optimization for Tiny Screens (Phones under 480px wide) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.1rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  .hero img, .profile-img {
+    max-width: 190px !important;
+  }
+}
