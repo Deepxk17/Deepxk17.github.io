@@ -1,42 +1,43 @@
-
 /* Modern Monochrome Portfolio CSS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Dark Mode Backgrounds & Surfaces (Built from the palette's deepest shades) */
-  --bg: #212529;         /* Shadow Grey - Deep, premium dark canvas */
-  --surface: #343A40;    /* Gunmetal - Slightly lighter dark for structural sections */
-  --card: #495057;       /* Iron Grey - Provides distinct, elegant container definition */
-  --card-hover: #6C757D; /* Slate Grey - Subtle, visible lift when interacting with elements */
+  /* Dark Mode Backgrounds & Surfaces */
+  --bg: #212529;         
+  --surface: #343A40;    
+  --card: #495057;       
+  --card-hover: #6C757D; 
 
-  /* Crisp Typography (High contrast using the light steel tones) */
-  --heading: #F8F9FA;    /* Bright Snow - Pure, glowing contrast for titles */
-  --text: #E9ECEF;       /* Platinum - Highly readable soft white for primary body text */
-  --paragraph: #DEE2E6;  /* Alabaster Grey - Slightly relaxed gray to avoid eye strain on longer reads */
-  --muted: #CED4DA;      /* Pale Slate - Perfect for minor captions, tags, and dates */
+  /* Crisp Typography */
+  --heading: #F8F9FA;    
+  --text: #E9ECEF;       
+  --paragraph: #DEE2E6;  
+  --muted: #CED4DA;      
 
   /* Structural Details */
-  --border: #495057;     /* Iron Grey - A clean, subtle divider that doesn't scream for attention */
+  --border: #495057;     
   
   /* Layout Polish */
   --radius: 18px;
-  --shadow: 0 15px 40px rgba(0, 0, 0, 0.5); /* Deep, rich shadow to separate overlapping layers */
+  --shadow: 0 15px 40px rgba(0, 0, 0, 0.5); 
   --transition: .35s ease;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Poppins',sans-serif;background:
-radial-gradient(circle at top right,
-rgba(255,255,255,.04),
-transparent 35%),
-
-var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden;}
+body{
+  font-family:'Poppins',sans-serif;
+  background: radial-gradient(circle at top right, rgba(255,255,255,.04), transparent 35%), var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  overflow-x:hidden;
+}
 img{width:100%;display:block;}
 a{text-decoration:none;color:inherit;}
 ul{list-style:none;}
 section{padding:100px 8%;}
 
+/* Scrollbar styling */
 ::-webkit-scrollbar{width:10px;}
 ::-webkit-scrollbar-track{background:#161616;}
 ::-webkit-scrollbar-thumb{background:#6C757D;border-radius:20px;}
@@ -44,21 +45,22 @@ section{padding:100px 8%;}
 
 #progress-bar{position:fixed;top:0;left:0;width:0;height:4px;background:#fff;z-index:9999;}
 
+/* Navigation Bar */
 header{
-position:fixed;top:0;left:0;width:100%;
-background:rgba(17,19,21,.82);
-backdrop-filter:blur(14px);
-border-bottom:1px solid var(--border);
-z-index:999;
+  position:fixed;top:0;left:0;width:100%;
+  background:rgba(17,19,21,.82);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  z-index:999;
 }
 
 .navbar{
-width:min(1200px,90%);
-height:80px;
-margin:auto;
-display:flex;
-justify-content:space-between;
-align-items:center;
+  width:min(1200px,90%);
+  height:80px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
 .logo{font-size:1.8rem;font-weight:700;color:var(--heading);}
@@ -66,21 +68,17 @@ align-items:center;
 
 .nav-links{display:flex;gap:2rem;}
 .nav-links a{color:var(--paragraph);transition:var(--transition);}
-.nav-links a:hover{
-
-    color:var(--heading);
-
-}
+.nav-links a:hover{color:var(--heading);}
 .menu-btn{display:none;font-size:1.5rem;cursor:pointer;}
 
-#home{
-min-height:100vh;
-padding-top:120px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:4rem;
-flex-wrap:wrap;
+/* Hero Section Base */
+#home {
+  min-height: 100vh;
+  padding-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
 }
 
 .hero-left{flex:1;min-width:320px;}
@@ -96,17 +94,11 @@ flex-wrap:wrap;
 }
 
 .hero-left h1{
-
     font-size:88px;
-
     font-weight:800;
-
     line-height:1;
-
     color:var(--heading);
-
     margin-bottom:20px;
-
 }
 
 .hero-left h2{
@@ -123,243 +115,112 @@ flex-wrap:wrap;
 }
 
 .hero-left p{
-max-width:600px;
-color:var(--paragraph);
-font-size:1.1rem;
+    max-width:600px;
+    color:var(--paragraph);
+    font-size:1.1rem;
 }
 
 .hero-buttons{
-display:flex;
-gap:1rem;
-margin-top:2rem;
+    display:flex;
+    gap:1rem;
+    margin-top:2rem;
 }
 
-.btn,
-.btn-secondary{
-
+.btn, .btn-secondary{
     padding:18px 38px;
-
     border-radius:18px;
-
     font-size:16px;
-
     font-weight:600;
-
     transition:var(--transition);
-
+    display: inline-block;
 }
 
 .btn{
-background:#fff;
-color:#111315;
+    background:#fff;
+    color:#111315;
 }
 
 .btn:hover{
-transform:translateY(-4px);
-box-shadow:var(--shadow);
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
 }
 
 .btn-secondary{
-border:1px solid var(--border);
-color:#fff;
+    border:1px solid var(--border);
+    color:#fff;
 }
 
 .btn-secondary:hover{
-background:var(--card-hover);
+    background:var(--card-hover);
 }
 
 .socials{
-display:flex;
-gap:1rem;
-margin-top:2rem;
+    display:flex;
+    gap:1rem;
+    margin-top:2rem;
 }
 
 .socials a{
-width:46px;
-height:46px;
-display:flex;
-justify-content:center;
-align-items:center;
-background:var(--surface);
-border:1px solid var(--border);
-border-radius:50%;
-transition:var(--transition);
+    width:46px;
+    height:46px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:var(--surface);
+    border:1px solid var(--border);
+    border-radius:50%;
+    transition:var(--transition);
 }
 
 .socials a:hover{
-background:var(--card-hover);
-transform:translateY(-5px);
+    background:var(--card-hover);
+    transform:translateY(-5px);
 }
 
 .hero-right img{
-
     width:360px;
-
     height:360px;
-
     border-radius:50%;
-
     object-fit:cover;
-
     border:2px solid var(--border);
-
-    box-shadow:
-
-    0 20px 60px rgba(0,0,0,.45);
-
+    box-shadow: 0 20px 60px rgba(0,0,0,.45);
 }
 
-.section-title{
-font-size:2.5rem;
-text-align:center;
-margin-bottom:3rem;
-}
-
-.card{
-background:var(--card);
-border:1px solid var(--border);
-padding:24px;
-border-radius:18px;
-transition:var(--transition);
-}
-
-.card:hover{
-background:var(--card-hover);
-transform:translateY(-6px);
-}
-
-footer{
-padding:2rem;
-text-align:center;
-border-top:1px solid var(--border);
-color:var(--muted);
-}
-
-/* ==========================================
-   DESKTOP BASE LAYOUT (Place in style.css)
-   ========================================== */
-
-/* Hero Section Base */
-#home {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
-  min-height: 80vh;
-  padding: 0 10%;
-}
-
-.hero-left {
-  flex: 1;
-}
-
-.hero-right {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-right img {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* About Section Base */
-.about-container {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  padding: 0 10%;
-}
-
-/* Services Grid Base (3 Columns on Desktop) */
-.services-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 0 10%;
-}
-
-@media(max-width:992px){
-  .about-container{grid-template-columns:1fr;}
-.nav-links{display:none;}
-.menu-btn{display:block;}
-#home{flex-direction:column-reverse;text-align:center;}
-.hero-buttons,.socials{justify-content:center;}
-.hero-right img{width:280px;height:280px;}
-}
-
-@media(max-width:576px){
-section{padding:80px 6%;}
-.hero-buttons{flex-direction:column;}
-.btn,.btn-secondary{text-align:center;}
-}
-
-/*====================================
-            ABOUT
-====================================*/
-
+/* About Section */
 #about{
-
     padding:120px 8%;
-
 }
 
 .section-heading{
-
     text-align:center;
-
     margin-bottom:70px;
-
 }
 
 .section-heading span{
-
     color:var(--muted);
-
     letter-spacing:6px;
-
     font-size:14px;
-
     font-weight:600;
-
 }
 
 .section-heading h2{
-
     font-size:46px;
-
     margin-top:10px;
-
     color:var(--heading);
-
 }
 
 .about-container{
-
     display:grid;
-
     grid-template-columns:2fr 1fr;
-
     gap:60px;
-
     align-items:start;
-
 }
 
 .about-text p{
-
     color:var(--paragraph);
-
     font-size:18px;
-
     line-height:1.9;
-
     margin-bottom:25px;
-
 }
 
 .about-info{
@@ -419,180 +280,137 @@ section{padding:80px 6%;}
     color:var(--paragraph);
 }
 
-/*====================================
-            SERVICES
-====================================*/
-
+/* Services / Expertise Section */
 #services{
-
     padding:90px 8%;
-
 }
 
 .services-grid{
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:35px;
-
     margin-top:70px;
-
 }
 
 .service-card{
-
-    background:linear-gradient(
-        180deg,
-        rgba(255,255,255,.03),
-        rgba(255,255,255,.01)
-    );
-
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
     border:1px solid rgba(255,255,255,.08);
-
     border-radius:22px;
-
     padding:45px 35px;
-
     transition:all .35s ease;
-
     backdrop-filter:blur(15px);
-
 }
 
 .service-card:hover{
-
     transform:translateY(-12px);
-
     box-shadow:0 20px 50px rgba(0,0,0,.25);
-
     border-color:rgba(255,255,255,.18);
-
 }
 
 .service-card i{
-
     font-size:55px;
-
     margin-bottom:30px;
-
 }
 
 .service-card h3{
-
     font-size:28px;
-
     margin-bottom:18px;
-
 }
 
 .service-card p{
-
     color:var(--paragraph);
-
     line-height:1.9;
-
     font-size:16px;
-
 }
 
-@media(max-width:992px){
-
-.services-grid{
-
-grid-template-columns:1fr;
-
+footer{
+    padding:2rem;
+    text-align:center;
+    border-top:1px solid var(--border);
+    color:var(--muted);
 }
 
-}
 /* ==========================================
-   MOBILE & TABLET RESPONSIVE STYLES
+   TABLET & LAPTOP ADAPTABILITY (Under 992px)
+   ========================================== */
+@media(max-width:992px){
+  .nav-links{display:none;}
+  .menu-btn{display:block;}
+  
+  #home{
+    flex-direction:column-reverse;
+    text-align:center;
+    gap: 3rem;
+  }
+  
+  .hero-left h1{
+    font-size: 4.5rem;
+  }
+
+  .hero-buttons, .socials{justify-content:center;}
+  .hero-right img{width:280px;height:280px;}
+  
+  .about-container{
+    grid-template-columns:1fr;
+    gap: 40px;
+  }
+  
+  .services-grid{
+    grid-template-columns:1fr;
+    gap: 25px;
+  }
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE ADAPTABILITY (Under 768px)
    ========================================== */
 @media (max-width: 768px) {
-  
-  /* 1. Global Section Padding Fix */
-  section {
-    padding: 40px 20px !important; /* Prevents text from hitting the screen edges */
+  section, #about, #services {
+    padding: 60px 5% !important; 
   }
 
-  /* 2. Hero Section Adjustments */
-  /* If your layout splits text and image side-by-side, this stacks them cleanly */
-  .hero, .hero-container, #home {
-    display: flex !important;
-    flex-direction: column-reverse !important; /* Puts the profile image/avatar on top, text below */
-    text-align: center !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  /* Scale down the massive typography so it doesn't break into weird lines */
-  h1 {
-    font-size: 2.5rem !important; 
-    line-height: 1.2 !important;
+  .hero-left h1 {
+    font-size: 3rem !important; 
   }
   
-  h2 {
+  .hero-left h2 {
     font-size: 1.8rem !important;
   }
-
-  /* Center and stack the action buttons */
-  .hero-buttons, .buttons-container {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 15px !important;
-    width: 100% !important;
-    align-items: center !important;
+  
+  .section-heading h2 {
+    font-size: 2.2rem !important;
   }
 
-  .hero-buttons a, .btn {
-    width: 80% !important; /* Makes tap targets wider and easier to click on phones */
-    text-align: center !important;
-    margin: 0 !important;
+  .info-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
   }
 
-  /* Ensure your profile image fits nicely and doesn't stretch */
-  .hero img, .profile-img {
-    max-width: 240px !important;
-    width: 100% !important;
-    height: auto !important;
-    margin-bottom: 20px !important;
-  }
-
-  /* 3. Navigation Bar Scaling */
-  /* Keeps the nav menu items from bunching up or wrapping into a huge mess */
-  nav, .navbar {
-    padding: 15px 10px !important;
-  }
-
-  nav ul {
-    display: flex !important;
-    flex-wrap: wrap !important; /* Allows links to flow nicely if they run out of space */
-    justify-content: center !important;
-    gap: 10px 15px !important;
-    padding: 0 !important;
-  }
-
-  /* 4. Expertise Section (What I Do) */
-  /* Changes your 3-column desktop layout (Web Dev, Graphics, Video) into a single column vertical stack */
-  .expertise-grid, .services-container, .grid-layout {
-    display: grid !important;
-    grid-template-columns: 1fr !important; /* Forces 1 column */
-    gap: 20px !important;
+  .card-content {
+    border-left: none;
+    padding-left: 0;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,.08);
   }
 }
 
-/* Extra Optimization for Tiny Screens (Phones under 480px wide) */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2.1rem !important;
+/* ==========================================
+   SMALL SMARTPHONE OPTIMIZATION (Under 576px)
+   ========================================== */
+@media(max-width:576px){
+  .hero-buttons{
+    flex-direction:column;
+    width: 100%;
+    align-items: center;
   }
   
-  h2 {
-    font-size: 1.5rem !important;
+  .btn, .btn-secondary{
+    width: 85%;
+    text-align:center;
   }
   
-  .hero img, .profile-img {
-    max-width: 190px !important;
+  .hero-left h1 {
+    font-size: 2.5rem !important;
   }
 }
