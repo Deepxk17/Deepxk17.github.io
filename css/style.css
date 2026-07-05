@@ -235,6 +235,54 @@ border-top:1px solid var(--border);
 color:var(--muted);
 }
 
+/* ==========================================
+   DESKTOP BASE LAYOUT (Place in style.css)
+   ========================================== */
+
+/* Hero Section Base */
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  min-height: 80vh;
+  padding: 0 10%;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* About Section Base */
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 0 10%;
+}
+
+/* Services Grid Base (3 Columns on Desktop) */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 10%;
+}
+
 @media(max-width:992px){
   .about-container{grid-template-columns:1fr;}
 .nav-links{display:none;}
