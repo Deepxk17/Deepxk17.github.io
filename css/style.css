@@ -419,9 +419,12 @@ footer{
 }
 
 /* ==========================================
-   PROFILE PICTURE CIRCLE FIX
+   MOBILE FIXES (Profile Circle & Header Space)
    ========================================== */
 @media (max-width: 768px) {
+  #home {
+    padding-top: 140px !important; /* Pushes content safely below the fixed header logo */
+  }
   .hero-right img {
     width: 240px !important;
     height: 240px !important;
@@ -440,12 +443,3 @@ footer{
     min-height: 200px !important;
   }
 }
-/* ==========================================
-   HEADER LOGO BAR OVERLAY FIX
-   ========================================== */
-@media (max-width: 768px) {
-  #home {
-    padding-top: 140px !important; /* Gives the profile picture plenty of space below the header */
-  }
-}
-
