@@ -370,12 +370,20 @@ footer{
     padding: 60px 5% !important; 
   }
 
+  /* Force elements to fit within the viewport bounds safely */
+  #home, .about-container, .services-grid {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
+
   .hero-left h1 {
-    font-size: 3rem !important; 
+    font-size: 2.6rem !important; /* Dynamically scales down your name layout */
+    line-height: 1.2 !important;
   }
   
   .hero-left h2 {
-    font-size: 1.8rem !important;
+    font-size: 1.6rem !important;
   }
   
   .section-heading h2 {
@@ -394,8 +402,18 @@ footer{
     padding-top: 15px;
     border-top: 1px solid rgba(255,255,255,.08);
   }
+  
+  /* Stack the skill cards cleanly in a vertical layout */
+  .services-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  
+  .service-card {
+    width: 100% !important;
+  }
 }
-
 /* ==========================================
    SMALL SMARTPHONE OPTIMIZATION (Under 576px)
    ========================================== */
